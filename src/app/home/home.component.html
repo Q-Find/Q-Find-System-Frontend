@@ -4,45 +4,5 @@
         <app-sidebar></app-sidebar>
     </div>
     <div class="content">
-        <div class="home">
-            <div class="left-col">
-                <form class="ticket-sell-form" #ticketdetail="ngForm" (ngSubmit)="ticketDetailsAdd(ticketdetail.value)">
-                    <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Category</label><br>
-                        <select class="ticket-sell-form-row-input" type="text" name="category" ngModel>
-                            <option value="0">Bus</option>
-                            <option value="1">Train</option>
-                            <option value="2">Theatre</option>
-                        </select>
-                    </div>
-                    <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Contact Person Name</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="contactName" ngModel>
-                    </div>
-                    <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Contact Number</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="contactNumber" ngModel>
-                    </div>
-                    <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Seats Count</label><br>
-                        <input class="ticket-sell-form-row-input" type="number" name="seatsCount" ngModel>
-                    </div>
-                    <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">When</label><br>
-                        <input class="ticket-sell-form-row-input" type="datetime" name="dateTime" ngModel>
-                    </div>
-                    <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Descriptions</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="description" ngModel>
-                    </div>
-                    <div class="ticket-sell-form-row">
-                        <button class="ticket-sell-form-button" type="submit">Add</button>
-                    </div>
-                </form>
-            </div>
-            <div class="right-col">
-                <img class="ticket-sell-img" src="../../assets/Images/—Pngtree—cartoon hand drawn smart appointment_5437841.png">
-            </div>
-        </div>
     </div>
 </div>

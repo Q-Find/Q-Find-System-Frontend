@@ -12,6 +12,8 @@ import { StarredComponent } from './starred/starred.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BuyTicketsComponent } from './buy-tickets/buy-tickets.component';
+import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     SettingsComponent,
-    StarredComponent
+    StarredComponent,
+    BuyTicketsComponent,
+    SellTicketsComponent
   ],
   imports: [
     BrowserModule,

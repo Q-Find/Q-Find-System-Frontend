@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+    <div class="side-bar-col">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="content">
+        <div class="home">
+            <ul class="tickets-details-table">
+                <li class="table-header">
+                    <div class="col col-1">Category</div>
+                    <div class="col col-2">Seats Count</div>
+                    <div class="col col-3">Date & Time</div>
+                    <div class="col col-4">Description</div>
+                </li>
+                <div *ngFor="let ticket of tickets">
+                    <li class="table-row">
+                        <div class="col col-1" data-label="Job Id">
+                            <div *ngIf="ticket.category == 0">
+                                <img class="category-icon" src="../../assets/Images/bus-side-view.png">
+                            </div>
+                            <div *ngIf="ticket.category == 1">
+                                <img class="category-icon" src="../../assets/Images/train.png">
+                            </div>
+                            <div *ngIf="ticket.category == 2">
+                                <img class="category-icon" src="../../assets/Images/theatre.png">
+                            </div>
+                        </div>
+                        <div class="col col-2" data-label="Customer Name">{{ticket.seatsCount}}</div>
+                        <div class="col col-3" data-label="Amount">{{ticket.dateTime}}</div>
+                        <div class="col col-4" data-label="Payment Status">{{ticket.description}}</div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>

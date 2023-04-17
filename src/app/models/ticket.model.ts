@@ -1,4 +1,5 @@
 export interface Ticket{
+    id: number;
     category : number;
     contactName :string;
     contactNumber : string;

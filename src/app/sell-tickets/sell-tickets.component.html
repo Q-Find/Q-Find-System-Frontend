@@ -1,0 +1,79 @@
+<app-header></app-header>
+<div class="container">
+    <div class="side-bar-col">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="content">
+        <div class="home">
+            <div class="left-col">
+                <form class="ticket-sell-form" #ticketdetail="ngForm" (ngSubmit)="addTicketDetails()">
+                    <div class="ticket-sell-form-row">
+                        <label class="ticket-sell-form-row-label">Category</label><br>
+                        <select class="ticket-sell-form-row-input" type="text" name="category" [(ngModel)]="ticket.category">
+                            <option value="0">Bus</option>
+                            <option value="1">Train</option>
+                            <option value="2">Theatre</option>
+                        </select>
+                    </div>
+                    <div class="ticket-sell-form-row">
+                        <label class="ticket-sell-form-row-label">Contact Person Name</label><br>
+                        <input class="ticket-sell-form-row-input" type="text" name="contactName" [(ngModel)]="ticket.contactName">
+                    </div>
+                    <div class="ticket-sell-form-row">
+                        <label class="ticket-sell-form-row-label">Contact Number</label><br>
+                        <input class="ticket-sell-form-row-input" type="text" name="contactNumber" [(ngModel)]="ticket.contactNumber">
+                    </div>
+                    <div class="ticket-sell-form-row">
+                        <label class="ticket-sell-form-row-label">Seats Count</label><br>
+                        <input class="ticket-sell-form-row-input" type="number" name="seatsCount" [(ngModel)]="ticket.seatsCount">
+                    </div>
+                    <div class="ticket-sell-form-row">
+                        <label class="ticket-sell-form-row-label">When</label><br>
+                        <input class="ticket-sell-form-row-input" type="text" datetime="yyyy-MM-dd HH:mm:ss"
+                            name="dateTime" [(ngModel)]="ticket.dateTime">
+                    </div>
+                    <div class="ticket-sell-form-row">
+                        <label class="ticket-sell-form-row-label">Descriptions</label><br>
+                        <input class="ticket-sell-form-row-input" type="text" name="description" [(ngModel)]="ticket.description">
+                    </div>
+                    <div class="ticket-sell-form-row">
+                        <button *ngIf="!isUpdated" class="ticket-sell-form-button" type="submit">Add</button>
+                        <button *ngIf="isUpdated" class="ticket-sell-form-button" type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+            <div class="right-col">
+                <img class="ticket-sell-img"
+                    src="../../assets/Images/—Pngtree—cartoon hand drawn smart appointment_5437841.png">
+            </div>
+        </div>
+        <div class="home">
+            <ul class="tickets-details-table">
+                <li class="table-header">
+                    <div class="col col-1">Category</div>
+                    <div class="col col-2">Seats Count</div>
+                    <div class="col col-3">Date & Time</div>
+                    <div class="col col-4">Description</div>
+                </li>
+                <li class="table-row" *ngFor="let ticket of tickets">
+                    <div class="col col-1" data-label="Job Id">
+                        <div *ngIf="ticket.category == 0">
+                            <img class="category-icon" src="../../assets/Images/bus-side-view.png">
+                        </div>
+                        <div *ngIf="ticket.category == 1">
+                            <img class="category-icon" src="../../assets/Images/train.png">
+                        </div>
+                        <div *ngIf="ticket.category == 2">
+                            <img class="category-icon" src="../../assets/Images/theatre.png">
+                        </div>
+                    </div>
+                    <div class="col col-2" data-label="Customer Name">{{ticket.seatsCount}}</div>
+                    <div class="col col-3" data-label="Amount">{{ticket.dateTime}}</div>
+                    <div class="col col-4" data-label="Payment Status">{{ticket.description}}</div>
+                    <button (click)="deleteTicket(ticket.id)">Delete</button>&nbsp;
+                    <button (click)="edit(ticket)">Edit</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -6,10 +6,10 @@
     <div class="content">
         <div class="home">
             <div class="left-col">
-                <form class="ticket-sell-form" #ticketdetail="ngForm" (ngSubmit)="addTicketDetails()">
+                <form class="ticket-sell-form" [formGroup]="ticketForm" (ngSubmit)="addTicketDetails()">
                     <div class="ticket-sell-form-row">
                         <label class="ticket-sell-form-row-label">Category</label><br>
-                        <select class="ticket-sell-form-row-input" type="text" name="category" [(ngModel)]="ticket.category">
+                        <select class="ticket-sell-form-row-input" type="text" name="category" formControlName = "category">
                             <option value="0">Bus</option>
                             <option value="1">Train</option>
                             <option value="2">Theatre</option>
@@ -17,24 +17,24 @@
                     </div>
                     <div class="ticket-sell-form-row">
                         <label class="ticket-sell-form-row-label">Contact Person Name</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="contactName" [(ngModel)]="ticket.contactName">
+                        <input class="ticket-sell-form-row-input" type="text" name="contactName" formControlName ="contactName">
                     </div>
                     <div class="ticket-sell-form-row">
                         <label class="ticket-sell-form-row-label">Contact Number</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="contactNumber" [(ngModel)]="ticket.contactNumber">
+                        <input class="ticket-sell-form-row-input" type="text" name="contactNumber" formControlName ="contactNumber">
                     </div>
                     <div class="ticket-sell-form-row">
                         <label class="ticket-sell-form-row-label">Seats Count</label><br>
-                        <input class="ticket-sell-form-row-input" type="number" name="seatsCount" [(ngModel)]="ticket.seatsCount">
+                        <input class="ticket-sell-form-row-input" type="number" name="seatsCount" formControlName = "seatsCount">
                     </div>
                     <div class="ticket-sell-form-row">
                         <label class="ticket-sell-form-row-label">When</label><br>
                         <input class="ticket-sell-form-row-input" type="text" datetime="yyyy-MM-dd HH:mm:ss"
-                            name="dateTime" [(ngModel)]="ticket.dateTime">
+                            name="dateTime" formControlName ="dateTime">
                     </div>
                     <div class="ticket-sell-form-row">
                         <label class="ticket-sell-form-row-label">Descriptions</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="description" [(ngModel)]="ticket.description">
+                        <input class="ticket-sell-form-row-input" type="text" name="description" formControlName ="description">
                     </div>
                     <div class="ticket-sell-form-row">
                         <button *ngIf="!isUpdated" class="ticket-sell-form-button" type="submit">Add</button>

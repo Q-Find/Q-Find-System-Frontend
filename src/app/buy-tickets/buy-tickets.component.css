@@ -1,9 +1,11 @@
-.home {
+.content{
     display: flex;
+}
+.home {
     margin-top: 15vh;
     border-radius: 5px;
-    width: 60%;
-    margin-left: auto;
+    width: 70%;
+    margin-left: 10%;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -55,6 +57,29 @@ li {
 
 .col-4 {
     flex-basis: 40%;
+}
+
+
+.filter{
+    margin-top: 15vh;
+    border-radius: 5px;
+    margin-left: 5%;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    height: fit-content;
+    padding: 1em;
+}
+.filter-title{
+    padding: 0.5em;
+    text-align: center;
+}
+.filter-button{
+    margin-top: 1vh;
+    border: none;
+    background-color: #6D9886;
+    padding: 0.5em;
+    border-radius: 3px;
+    color: #F7F7F7;
 }
 
 @media all and (max-width: 767px) {

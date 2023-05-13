@@ -32,5 +32,17 @@
                 </div>
             </ul>
         </div>
+        <div class="filter">
+            <p class="filter-title">Filter Options</p>
+            <div class="filter-option">
+                <label>Category</label>
+                <select class="filter-category" type="text" name="category" [(ngModel)]="filterCategory">
+                    <option value="0">Bus</option>
+                    <option value="1">Train</option>
+                    <option value="2">Theatre</option>
+                </select>
+            </div>
+            <button class="filter-button" (click)="filter()">Filter</button>
+        </div>
     </div>
 </div>

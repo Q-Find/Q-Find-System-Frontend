@@ -10,7 +10,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StarredComponent } from './starred/starred.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BuyTicketsComponent } from './buy-tickets/buy-tickets.component';
 import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
@@ -31,7 +31,8 @@ import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

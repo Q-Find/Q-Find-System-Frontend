@@ -5,6 +5,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { StarredComponent } from './starred/starred.component';
 import { BuyTicketsComponent } from './buy-tickets/buy-tickets.component';
 import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
+import { LoginComponent } from './Authentication/login/login.component';
+import { RegisterComponent } from './Authentication/register/register.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path:'settings',component:SettingsComponent},
   {path:'starred',component:StarredComponent},
   {path:'buy-tickets',component:BuyTicketsComponent},
-  {path:'sell-tickets',component:SellTicketsComponent}
+  {path:'sell-tickets',component:SellTicketsComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent}
 ];
 
 @NgModule({

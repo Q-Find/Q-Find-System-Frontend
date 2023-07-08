@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BuyTicketsComponent } from './buy-tickets/buy-tickets.component';
 import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
+import { LoginComponent } from './Authentication/login/login.component';
+import { RegisterComponent } from './Authentication/register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
     SettingsComponent,
     StarredComponent,
     BuyTicketsComponent,
-    SellTicketsComponent
+    SellTicketsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
 .side-bar{
-    margin-top: 15vh;
     margin-left: 2vw;
-    background-color: #393E46;
+    background-color: var(--color1);
     width: 15%;
     position: fixed;
     display: block;
@@ -11,17 +10,26 @@
 .side-bar-row{
     padding: 1em;
     border: none;
+    height: 20px;
 }
 
 .side-bar-text{
     font-size: 20px;
-    color: #F7F7F7;
+    color: var(--font-color1);
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font);
     text-align: center;
 }
 
 
 .active{
-    background-color: #6D9886;
+    background-color: var(--color2);
+}
+
+.side-bar-text:hover{
+    /* text-shadow: 0 0 2px #FFFFFF; */
+    transition-duration: 0.4s;
+    animation-timing-function: ease-in;
+    font-size: 21px;
+    /* color: #d3bd9a; */
 }

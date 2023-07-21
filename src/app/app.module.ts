@@ -16,6 +16,7 @@ import { BuyTicketsComponent } from './buy-tickets/buy-tickets.component';
 import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
 import { LoginComponent } from './Authentication/login/login.component';
 import { RegisterComponent } from './Authentication/register/register.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RegisterComponent } from './Authentication/register/register.component'
     BuyTicketsComponent,
     SellTicketsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserinfoComponent
   ],
   imports: [
     BrowserModule,

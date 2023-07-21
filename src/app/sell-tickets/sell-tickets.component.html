@@ -4,37 +4,32 @@
         <app-sidebar></app-sidebar>
     </div>
     <div class="content">
-        <div class="home">
+        <div class="add-ticket">
             <div class="left-col">
                 <form class="ticket-sell-form" [formGroup]="ticketForm" (ngSubmit)="addTicketDetails()">
                     <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Category</label><br>
                         <select class="ticket-sell-form-row-input" type="text" name="category" formControlName = "category">
+                            <option disabled  value="">Category</option>
                             <option value="0">Bus</option>
-                            <option value="1">Train</option>
+                            <option value="1" selected>Train</option>
                             <option value="2">Theatre</option>
                         </select>
                     </div>
                     <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Contact Person Name</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="contactName" formControlName ="contactName">
+                        <input class="ticket-sell-form-row-input" placeholder="Contact Person Name" type="text" name="contactName" formControlName ="contactName">
                     </div>
                     <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Contact Number</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="contactNumber" formControlName ="contactNumber">
+                        <input class="ticket-sell-form-row-input" placeholder="Contact Number" type="text" name="contactNumber" formControlName ="contactNumber">
                     </div>
                     <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Seats Count</label><br>
-                        <input class="ticket-sell-form-row-input" type="number" name="seatsCount" formControlName = "seatsCount">
+                        <input class="ticket-sell-form-row-input" placeholder="Seats Count" type="number" name="seatsCount" formControlName = "seatsCount">
                     </div>
                     <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">When</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" datetime="yyyy-MM-dd HH:mm:ss"
+                        <input class="ticket-sell-form-row-input" placeholder="When" type="text" datetime="yyyy-MM-dd HH:mm:ss"
                             name="dateTime" formControlName ="dateTime">
                     </div>
                     <div class="ticket-sell-form-row">
-                        <label class="ticket-sell-form-row-label">Descriptions</label><br>
-                        <input class="ticket-sell-form-row-input" type="text" name="description" formControlName ="description">
+                        <input class="ticket-sell-form-row-input" placeholder="Descriptions" type="text" name="description" formControlName ="description">
                     </div>
                     <div class="ticket-sell-form-row">
                         <button *ngIf="!isUpdated" class="ticket-sell-form-button" type="submit">Add</button>
@@ -47,7 +42,7 @@
                     src="../../assets/Images/—Pngtree—cartoon hand drawn smart appointment_5437841.png">
             </div>
         </div>
-        <div class="home">
+        <div class="sell-ticket">
             <ul class="tickets-details-table">
                 <li class="table-header">
                     <div class="col col-1">Category</div>
@@ -76,4 +71,5 @@
             </ul>
         </div>
     </div>
+    <div class="right-bar-col"></div>
 </div>

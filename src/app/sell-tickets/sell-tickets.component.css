@@ -1,8 +1,17 @@
-.home {
+.add-ticket {
     display: flex;
-    margin-top: 15vh;
     border-radius: 2px;
-    width: 60%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.sell-ticket {
+    margin-top: 10vh;
+    display: flex;
+    border-radius: 2px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -10,6 +19,7 @@
 
 .ticket-sell-form {
     padding: 1em;
+    
 }
 
 .left-col {
@@ -24,16 +34,23 @@
 
 .ticket-sell-form-row {
     padding: 0.5em;
+    margin-top: 2vh;
 }
 
 .ticket-sell-form-row-label {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font);
 }
 
 .ticket-sell-form-row-input {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font);
     width: 100%;
-    padding: 0.5em 0.1em;
+    padding: 4px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    font-size: 16px;
+    outline: none;
+    color: #000;
 }
 
 .ticket-sell-img {
@@ -46,14 +63,14 @@
 }
 
 .ticket-sell-form-button {
-    background-color: #6D9886;
+    background-color: var(--color2);
     border: 1px solid transparent;
     border-radius: 3px;
     box-sizing: border-box;
-    color: #F7F7F7;
+    color: var(--font-color1);;
     cursor: pointer;
     flex: 0 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font);
     font-size: 16px;
     /* font-weight: 600; */
     line-height: 0.5rem;
@@ -86,14 +103,14 @@
 }
 
 
-.tickets-details-table{
+.tickets-details-table {
     margin-left: auto;
     margin-right: auto;
     display: block;
     width: 100%;
 }
 
-.category-icon{
+.category-icon {
     width: 50px;
     height: 50px;
 }
@@ -111,7 +128,8 @@ li {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: #F7F7F7;
+    color: var(--font-color1);
+    font-family: var(--font);
 }
 
 .table-row {

@@ -1,20 +1,40 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
 .container {
-    display: flex;
-    width: 90%;
+  display: flex;
+  width: 100%;
+  margin-top: 15vh;
 }
-.side-bar-col{
-    flex: 25%;
+
+.side-bar-col {
+  flex: 20%;
+  width: 100%;
+  /* background-color: aqua; */
 }
-.content{
-    width: 100%;
+
+.content {
+  flex: 60%;
+  width: 100%;
+  /* background-color: burlywood; */
+}
+
+.right-bar-col {
+  flex: 20%;
+  /* background-color: aquamarine; */
+}
+
+:root {
+  --font: Arial, Helvetica, sans-serif;
+  --font-color1: #F7F7F7;
+  --color1: #393E46;
+  --color2: #6D9886;
 }

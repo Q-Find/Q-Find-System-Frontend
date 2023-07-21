@@ -7,16 +7,18 @@ import { BuyTicketsComponent } from './buy-tickets/buy-tickets.component';
 import { SellTicketsComponent } from './sell-tickets/sell-tickets.component';
 import { LoginComponent } from './Authentication/login/login.component';
 import { RegisterComponent } from './Authentication/register/register.component';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'home',component:HomeComponent},
-  {path:'settings',component:SettingsComponent},
-  {path:'starred',component:StarredComponent},
-  {path:'buy-tickets',component:BuyTicketsComponent},
-  {path:'sell-tickets',component:SellTicketsComponent},
-  {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent}
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'settings', component: SettingsComponent },
+  { path: 'starred', component: StarredComponent },
+  { path: 'buy-tickets', component: BuyTicketsComponent },
+  { path: 'sell-tickets', component: SellTicketsComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'userinfo', component: UserinfoComponent }
 ];
 
 @NgModule({

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  debugUrl: "https://localhost:7002/api",
+  releaseUrl: "https://qfind20230723201455.azurewebsites.net/api"
 };
 
 /*

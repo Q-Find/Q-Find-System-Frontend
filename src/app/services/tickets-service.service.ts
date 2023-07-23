@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Ticket } from '../models/ticket.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,11 @@ export class TicketsServiceService {
 
   constructor(private http : HttpClient) { }
 
-  baseUrl = "https://localhost:7002/api/Tickets"
+  apiUrl = environment.production ? environment.releaseUrl : environment.debugUrl;
+  baseUrl = this.apiUrl + "/Tickets";
 
   getAllTickets():Observable<Ticket[]>{ 
+    console.log(this.baseUrl);
     return this.http.get<Ticket[]>(this.baseUrl);
   }
 

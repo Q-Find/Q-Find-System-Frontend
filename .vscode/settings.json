@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/00a646db-2e96-4501-8dfa-74fa5222bcb9/resourceGroups/qfind/providers/Microsoft.Web/sites/qfindsystem",
+    "appService.deploySubpath": "."
+}

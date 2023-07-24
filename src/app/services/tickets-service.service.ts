@@ -11,7 +11,8 @@ export class TicketsServiceService {
 
   constructor(private http : HttpClient) { }
 
-  apiUrl = environment.production ? environment.releaseUrl : environment.debugUrl;
+  // apiUrl = environment.production ? environment.releaseUrl : environment.debugUrl;
+  apiUrl = "https://qfind20230723201455.azurewebsites.net/api";
   baseUrl = this.apiUrl + "/Tickets";
 
   getAllTickets():Observable<Ticket[]>{ 

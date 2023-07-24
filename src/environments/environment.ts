@@ -4,8 +4,8 @@
 
 export const environment = {
   production: true,
-  debugUrl: "https://localhost:7002/api",
-  releaseUrl: "https://qfind20230723201455.azurewebsites.net/api"
+  // debugUrl: "https://localhost:7002/api",
+  // releaseUrl: "https://qfind20230723201455.azurewebsites.net/api"
 };
 
 /*
